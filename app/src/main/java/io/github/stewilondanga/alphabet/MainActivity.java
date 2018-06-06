@@ -14,5 +14,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Kingthings_Calligraphica_Light.ttf");
+        gridView = (GridView) findViewById(R.id.baseGridView);
+        gridView.setAdapter(new AlphabetAdapter(this, letters, typeface));
     }
 }
